@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --primary-color-1: #facc15;
+  --color-txt: #fef9c3;
+}
+
+/* media-queries */
+/* GLOBAL SETTINGS */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 1.6;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6431372549), rgba(0, 0, 0, 0.6352941176)), url("images/Desktop-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-txt);
+  mix-blend-mode: screen;
+  display: grid;
+  place-content: center;
+}
+@media only screen and (max-width: 18.75em) {
+  body {
+    padding: 2rem;
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+h1 {
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+h1 .icon {
+  font-size: 6rem;
+}
+
+#form {
+  width: 60rem;
+  font-size: 2rem;
+  background-color: rgba(198, 198, 198, 0.301);
+  border-radius: 1rem;
+  padding: 5rem;
+  box-shadow: 0 0.1rem 1.5rem 0.1rem rgba(253, 254, 253, 0.603);
+}
+@media only screen and (max-width: 25em) {
+  #form {
+    max-width: 50rem;
+    padding: 4rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  #form {
+    max-width: 40rem;
+    padding: 2rem;
+  }
+}
+
+input[type=text] {
+  width: 90%;
+  padding: 1.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  border: none;
+}
+@media only screen and (max-width: 18.75em) {
+  input[type=text] {
+    padding: 1rem;
+  }
+}
+
+input:focus {
+  outline-color: var(--primary-color-1);
+}
+
+.inputField {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.icon {
+  font-size: 4rem;
+  color: var(--primary-color-1);
+}
+@media only screen and (max-width: 18.75em) {
+  .icon {
+    font-size: 3rem;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.list__item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0 1rem 1rem;
+  position: relative;
+  border-radius: 1rem;
+}
+@media only screen and (max-width: 18.75em) {
+  .list__item {
+    gap: 1rem;
+  }
+}
+.list__item:not(:last-child)::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: hsla(0, 0%, 76%, 0.205);
+  position: absolute;
+  bottom: -20%;
+  left: 0;
+}
+.list__btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50rem;
+  background: none;
+  border: 2px solid var(--primary-color-1);
+  cursor: pointer;
+}
+.list__btn--checked {
+  background-color: var(--primary-color-1);
+}
+.list__btn--checked + .list__text {
+  text-decoration: line-through;
+}
+@media only screen and (max-width: 18.75em) {
+  .list__btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.list__text {
+  margin-right: auto;
+}
+
+/*# sourceMappingURL=style.css.map */

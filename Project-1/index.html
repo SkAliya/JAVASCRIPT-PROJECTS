@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Todo project</title>
+  </head>
+  <body>
+    <main>
+      <h1>ToDo <ion-icon name="newspaper-outline" class="icon"></ion-icon></h1>
+      <div id="form">
+        <div class="inputField">
+          <input
+            type="text"
+            id="inputField__input"
+            placeholder="Write your task"
+            required
+          />
+          <button class="inputField__btn btn">
+            <ion-icon name="add-circle" class="icon"></ion-icon>
+          </button>
+        </div>
+        <ul class="list">
+          <li class="list__item">
+            <button class="list__btn"></button>
+            <div class="list__text">Add your new TODO</div>
+
+            <button class="list__icon btn">
+              <ion-icon name="create" class="icon list__icon--edit"></ion-icon>
+            </button>
+            <button class="list__icon btn">
+              <ion-icon name="trash" class="icon list__icon--delete"></ion-icon>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

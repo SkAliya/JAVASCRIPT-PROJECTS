@@ -1,0 +1,106 @@
+@use "./base.scss" as var1;
+
+h1 {
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  & .icon {
+    font-size: 6rem;
+  }
+}
+#form {
+  width: 60rem;
+  font-size: 2rem;
+  background-color: rgba(198, 198, 198, 0.301);
+  border-radius: 1rem;
+  padding: 5rem;
+  box-shadow: 0 0.1rem 1.5rem 0.1rem rgba(253, 254, 253, 0.603);
+  @media only screen and (max-width: var1.$bp-small) {
+    max-width: 50rem;
+    padding: 4rem;
+  }
+  @media only screen and (max-width: var1.$bp-smaller) {
+    max-width: 40rem;
+    padding: 2rem;
+  }
+}
+input[type="text"] {
+  width: 90%;
+  padding: 1.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 0.5rem;
+  border: none;
+  @media only screen and (max-width: var1.$bp-smaller) {
+    padding: 1rem;
+  }
+}
+input:focus {
+  outline-color: var(--primary-color-1);
+}
+.inputField {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.icon {
+  font-size: 4rem;
+  color: var(--primary-color-1);
+  @media only screen and (max-width: var1.$bp-smaller) {
+    font-size: 3rem;
+  }
+}
+.btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0 1rem 1rem;
+    position: relative;
+    border-radius: 1rem;
+    @media only screen and (max-width: var1.$bp-smaller) {
+      gap: 1rem;
+    }
+    &:not(:last-child)::after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background-color: hwb(0 76% 24% / 0.205);
+      position: absolute;
+      bottom: -20%;
+      left: 0;
+    }
+  }
+
+  &__btn {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50rem;
+    background: none;
+    border: 2px solid var(--primary-color-1);
+    cursor: pointer;
+    &--checked {
+      background-color: var(--primary-color-1);
+      & + .list__text {
+        text-decoration: line-through;
+      }
+    }
+    @media only screen and (max-width: var1.$bp-smaller) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+  &__text {
+    margin-right: auto;
+  }
+}
