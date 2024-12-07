@@ -9,18 +9,18 @@ h1 {
   }
 }
 #form {
-  width: 60rem;
+  width: 50rem;
   font-size: 2rem;
   background-color: rgba(198, 198, 198, 0.301);
   border-radius: 1rem;
-  padding: 5rem;
+  padding: 4rem;
   box-shadow: 0 0.1rem 1.5rem 0.1rem rgba(253, 254, 253, 0.603);
   @media only screen and (max-width: var1.$bp-small) {
-    max-width: 50rem;
-    padding: 4rem;
+    max-width: 40rem;
+    padding: 3rem;
   }
   @media only screen and (max-width: var1.$bp-smaller) {
-    max-width: 40rem;
+    max-width: 30rem;
     padding: 2rem;
   }
 }
@@ -35,6 +35,13 @@ input[type="text"] {
     padding: 1rem;
   }
 }
+input::placeholder {
+  font-size: 2rem;
+  font-weight: 100;
+}
+::-webkit-input-placeholder {
+  color: var(--primary-color-1);
+}
 input:focus {
   outline-color: var(--primary-color-1);
 }
@@ -42,10 +49,10 @@ input:focus {
   display: flex;
   gap: 2rem;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 .icon {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: var(--primary-color-1);
   @media only screen and (max-width: var1.$bp-smaller) {
     font-size: 3rem;
@@ -64,7 +71,7 @@ input:focus {
   &__item {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     padding: 1rem 0 1rem 1rem;
     position: relative;
     border-radius: 1rem;
@@ -83,8 +90,8 @@ input:focus {
   }
 
   &__btn {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50rem;
     background: none;
     border: 2px solid var(--primary-color-1);
