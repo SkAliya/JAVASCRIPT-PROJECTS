@@ -23,7 +23,7 @@
 
 <h2 align="center">Links</h2>
 
-- Live Site URL: [Live Demo](https://voluble-flan-7ba6e2.netlify.app/)
+- Live Site URL: [Live Demo](https://leafy-empanada-416b13.netlify.app/)
 
 <br>
 
