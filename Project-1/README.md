@@ -7,7 +7,7 @@
 <div align="center">
   <!-- Profile -->
   <a href="https://github.com/SkAliya">
-    <img src="https://img.shields.io/badge/Profile-Aliya%20Shaik-07ecf8?style=for-the-badge" alt="Aliya Profile">
+    <img src="https://img.shields.io/badge/Profile-Aliya%20Shaik-07ecf8?style=for-the-badge&logo=frontendmentor" alt="Aliya Profile">
   </a>
   <!-- Status -->
     <a href="#">
@@ -23,7 +23,7 @@
 
 <h2 align="center">Links</h2>
 
-- Live Site URL: [Live Demo](https://voluble-flan-7ba6e2.netlify.app/)
+- Live Site URL: [https://voluble-flan-7ba6e2.netlify.app/](Live Demo)
 
 <br>
 
