@@ -1,0 +1,73 @@
+@use "./base.scss" as var1;
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-txt);
+}
+.container {
+  width: 30rem;
+  background-color: var(--color-bg);
+  border-radius: 2rem;
+  padding: 3rem;
+  &__inp {
+    width: 100%;
+    font-family: inherit;
+    color: var(--color-txt);
+    font-weight: 500;
+    font-size: 4rem;
+    text-align: right;
+    margin: 1rem;
+    outline: none;
+    background: none;
+    caret-color: var(--primary-color-1);
+    // border: none;
+    resize: none;
+    margin: 0;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  &__total {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-total);
+    text-align: right;
+    margin-bottom: 3rem;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    font-size: 1.8rem;
+    color: var(--color-txt);
+    gap: 2rem;
+    &--item {
+      padding: 1rem 2rem;
+      font-weight: 600;
+      background: none;
+      border: none;
+      border-radius: 0.5rem;
+      color: var(--color-txt);
+      box-shadow: 0 0.4rem 0.6rem 0.1rem rgba($color: #0f172a, $alpha: 1);
+      &-1 {
+        padding: 0.7rem 1.4rem;
+        & > img {
+          width: 18px;
+        }
+        &:last-child {
+          grid-area: 5/3/-1/-1;
+          justify-self: stretch;
+        }
+      }
+    }
+    .ac {
+      padding: 1rem 1.4rem;
+      color: var(--primary-color-1);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --primary-color-1: #22d3ee;
+  --color-txt: #cbd5e1;
+  --color-total: #f8fafc;
+  --color-bg: #1e293bec;
+
+  --color-shadow: #0f172a;
+}
+/* media-queries */
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px
+$bp-mediumSmall: 50em; //800px
+$bp-small: 25em; //400px
+$bp-smaller: 18.75em; //300px
+
+/* GLOBAL SETTINGS */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  // @media only screen and (max-width: $bp-large) {
+  //   font-size: 50%;
+  // }
+  // @media only screen and (max-width: $bp-medium) {
+  //   font-size: 43.75%;
+  // }
+  // @media only screen and (max-width: $bp-mediumSmall) {
+  //   font-size: 37.5%;
+  // }
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  background-image: linear-gradient(
+      rgba(15, 23, 42, 0.404),
+      rgba(15, 23, 42, 0.233)
+    ),
+    url(images/background1.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  // CENTER CONTENT
+  display: grid;
+  place-content: center;
+  // @media only screen and (max-width: $bp-smaller) {
+  //   padding: 2rem;
+  // }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Project-2",
+  "version": "1.0.0",
+  "description": "Calculator - Project2",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss style.css -w"
+  },
+  "author": "Aliya Shaik",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.82.0"
+  }
+}

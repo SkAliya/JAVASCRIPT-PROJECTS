@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --primary-color-1: #22d3ee;
+  --color-txt: #cbd5e1;
+  --color-total: #f8fafc;
+  --color-bg: #1e293bec;
+  --color-shadow: #0f172a;
+}
+
+/* media-queries */
+/* GLOBAL SETTINGS */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.404), rgba(15, 23, 42, 0.233)), url(images/background1.png);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: grid;
+  place-content: center;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--color-txt);
+}
+
+.container {
+  width: 30rem;
+  background-color: var(--color-bg);
+  border-radius: 2rem;
+  padding: 3rem;
+}
+.container__inp {
+  width: 100%;
+  font-family: inherit;
+  color: var(--color-txt);
+  font-weight: 500;
+  font-size: 4rem;
+  text-align: right;
+  margin: 1rem;
+  outline: none;
+  background: none;
+  caret-color: var(--primary-color-1);
+  resize: none;
+  margin: 0;
+  padding: 0;
+  margin: 2rem 0;
+}
+.container ::-webkit-scrollbar {
+  display: none;
+}
+.container__total {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--color-total);
+  text-align: right;
+  margin-bottom: 3rem;
+}
+.container__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+  font-size: 1.8rem;
+  color: var(--color-txt);
+  gap: 2rem;
+}
+.container__grid--item {
+  padding: 1rem 2rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--color-txt);
+  box-shadow: 0 0.4rem 0.6rem 0.1rem #0f172a;
+}
+.container__grid--item-1 {
+  padding: 0.7rem 1.4rem;
+}
+.container__grid--item-1 > img {
+  width: 18px;
+}
+.container__grid--item-1:last-child {
+  grid-area: 5/3/-1/-1;
+  justify-self: stretch;
+}
+.container__grid .ac {
+  padding: 1rem 1.4rem;
+  color: var(--primary-color-1);
+}
+
+/*# sourceMappingURL=style.css.map */
