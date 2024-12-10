@@ -7,10 +7,16 @@ h1 {
   color: var(--color-txt);
 }
 .container {
-  width: 30rem;
+  max-width: 35rem;
   background-color: var(--color-bg);
   border-radius: 2rem;
   padding: 3rem;
+  @media only screen and (max-width: var1.$bp-mediumSmall) {
+    max-width: 40rem;
+  }
+  @media only screen and (max-width: var1.$bp-xsmall) {
+    max-width: 50rem;
+  }
   &__inp {
     width: 100%;
     font-family: inherit;
@@ -22,11 +28,15 @@ h1 {
     outline: none;
     background: none;
     caret-color: var(--primary-color-1);
-    // border: none;
+    border: 1px solid var(--primary-color-1);
     resize: none;
     margin: 0;
     padding: 0;
     margin: 2rem 0;
+    &.extraInput {
+      font-size: 2.8rem;
+      padding: 2rem;
+    }
   }
   ::-webkit-scrollbar {
     display: none;
@@ -37,6 +47,7 @@ h1 {
     color: var(--color-total);
     text-align: right;
     margin-bottom: 3rem;
+    overflow-x: auto;
   }
   &__grid {
     display: grid;
@@ -46,6 +57,15 @@ h1 {
     font-size: 1.8rem;
     color: var(--color-txt);
     gap: 2rem;
+    @media only screen and (max-width: var1.$bp-large) {
+      gap: 1.8rem;
+    }
+    @media only screen and (max-width: var1.$bp-mediumSmall) {
+      gap: 2.5rem;
+    }
+    @media only screen and (max-width: var1.$bp-xsmall) {
+      gap: 3rem;
+    }
     &--item {
       padding: 1rem 2rem;
       font-weight: 600;
@@ -54,8 +74,26 @@ h1 {
       border-radius: 0.5rem;
       color: var(--color-txt);
       box-shadow: 0 0.4rem 0.6rem 0.1rem rgba($color: #0f172a, $alpha: 1);
+      @media only screen and (max-width: var1.$bp-small) {
+        padding: 0.8rem 1.8rem;
+      }
+      @media only screen and (max-width: var1.$bp-mediumSmall) {
+        padding: 1.2rem 2.2rem;
+      }
+      @media only screen and (max-width: var1.$bp-xsmall) {
+        padding: 1.5rem 2.5rem;
+      }
       &-1 {
         padding: 0.7rem 1.4rem;
+        @media only screen and (max-width: var1.$bp-small) {
+          padding: 0.5rem 1.2rem;
+        }
+        @media only screen and (max-width: var1.$bp-mediumSmall) {
+          padding: 0.9rem 1.6rem;
+        }
+        @media only screen and (max-width: var1.$bp-xsmall) {
+          padding: 1.2rem 1.9rem;
+        }
         & > img {
           width: 18px;
         }
@@ -68,6 +106,15 @@ h1 {
     .ac {
       padding: 1rem 1.4rem;
       color: var(--primary-color-1);
+      @media only screen and (max-width: var1.$bp-small) {
+        padding: 0.8rem 1.2rem;
+      }
+      @media only screen and (max-width: var1.$bp-mediumSmall) {
+        padding: 1.2rem 1.6rem;
+      }
+      @media only screen and (max-width: var1.$bp-xsmall) {
+        padding: 1.5rem 1.9rem;
+      }
     }
   }
 }

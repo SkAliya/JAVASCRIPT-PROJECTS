@@ -4,190 +4,193 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator | Project-2</title>
+    <link rel="icon" href="./images/favicon.ico" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <h1>Calculator &nbsp;+/-</h1>
-      <div class="container">
-        <textarea class="container__inp" rows="1"></textarea><br />
-        <h2 class="container__total">0</h2>
+      <div class="main">
+        <h1>Calculator &nbsp;+/-</h1>
+        <div class="container">
+          <textarea class="container__inp" rows="1"></textarea><br />
+          <h2 class="container__total"></h2>
 
-        <div class="container__grid">
-          <button
-            class="container__grid--item ac"
-            data-type="symbol"
-            data-value="ac"
-          >
-            AC
-          </button>
-          <button
-            class="container__grid--item container__grid--item-1"
-            data-value="del"
-            data-type="symbol"
-          >
-            <img
-              src="./images/delete.svg"
+          <div class="container__grid">
+            <button
+              class="container__grid--item ac"
               data-type="symbol"
-              alt="delete-icon"
+              data-value="ac"
+            >
+              AC
+            </button>
+            <button
+              class="container__grid--item container__grid--item-1"
               data-value="del"
-            />
-          </button>
-
-          <button
-            class="container__grid--item container__grid--item-1"
-            data-value="&#37;"
-            data-type="symbol"
-          >
-            <img
-              src="./images/mod.svg"
               data-type="symbol"
-              alt="mod-icon"
-              data-value="&#37;"
-            />
-          </button>
+            >
+              <img
+                src="./images/delete.svg"
+                data-type="symbol"
+                alt="delete-icon"
+                data-value="del"
+              />
+            </button>
 
-          <button
-            class="container__grid--item container__grid--item-1"
-            data-value="&#8725;"
-            data-type="symbol"
-          >
-            <img
-              src="./images/divide.svg"
-              alt="divide-icon"
+            <button
+              class="container__grid--item container__grid--item-1"
+              data-value="%"
+              data-type="symbol"
+            >
+              <img
+                src="./images/mod.svg"
+                data-type="symbol"
+                alt="mod-icon"
+                data-value="%"
+              />
+            </button>
+
+            <button
+              class="container__grid--item container__grid--item-1"
               data-value="&#8725;"
               data-type="symbol"
-            />
-          </button>
+            >
+              <img
+                src="./images/divide.svg"
+                alt="divide-icon"
+                data-value="/"
+                data-type="symbol"
+              />
+            </button>
 
-          <button
-            class="container__grid--item"
-            data-value="7"
-            data-type="number"
-          >
-            7
-          </button>
-          <button
-            class="container__grid--item"
-            data-value="8"
-            data-type="number"
-          >
-            8
-          </button>
-          <button
-            class="container__grid--item"
-            data-value="9"
-            data-type="number"
-          >
-            9
-          </button>
-          <button
-            class="container__grid--item container__grid--item-1"
-            data-value="x"
-            data-type="symbol"
-          >
-            <img
-              src="./images/cross.svg"
-              alt="cross-icon"
+            <button
+              class="container__grid--item"
+              data-value="7"
+              data-type="number"
+            >
+              7
+            </button>
+            <button
+              class="container__grid--item"
+              data-value="8"
+              data-type="number"
+            >
+              8
+            </button>
+            <button
+              class="container__grid--item"
+              data-value="9"
+              data-type="number"
+            >
+              9
+            </button>
+            <button
+              class="container__grid--item container__grid--item-1"
               data-value="x"
               data-type="symbol"
-            />
-          </button>
+            >
+              <img
+                src="./images/cross.svg"
+                alt="cross-icon"
+                data-value="x"
+                data-type="symbol"
+              />
+            </button>
 
-          <button
-            class="container__grid--item"
-            data-value="4"
-            data-type="number"
-          >
-            4
-          </button>
-          <button
-            class="container__grid--item"
-            data-value="5"
-            data-type="number"
-          >
-            5
-          </button>
-          <button
-            class="container__grid--item"
-            data-value="6"
-            data-type="number"
-          >
-            6
-          </button>
-          <button
-            class="container__grid--item container__grid--item-1"
-            data-value="-"
-            data-type="symbol"
-          >
-            <img
-              src="./images/minus.svg"
-              alt="minus-icon"
+            <button
+              class="container__grid--item"
+              data-value="4"
+              data-type="number"
+            >
+              4
+            </button>
+            <button
+              class="container__grid--item"
+              data-value="5"
+              data-type="number"
+            >
+              5
+            </button>
+            <button
+              class="container__grid--item"
+              data-value="6"
+              data-type="number"
+            >
+              6
+            </button>
+            <button
+              class="container__grid--item container__grid--item-1"
               data-value="-"
               data-type="symbol"
-            />
-          </button>
+            >
+              <img
+                src="./images/minus.svg"
+                alt="minus-icon"
+                data-value="-"
+                data-type="symbol"
+              />
+            </button>
 
-          <button
-            class="container__grid--item"
-            data-value="1"
-            data-type="number"
-          >
-            1
-          </button>
-          <button
-            class="container__grid--item"
-            data-value="2"
-            data-type="number"
-          >
-            2
-          </button>
-          <button
-            class="container__grid--item"
-            data-value="3"
-            data-type="number"
-          >
-            3
-          </button>
-          <button
-            class="container__grid--item container__grid--item-1"
-            data-value="&plus;"
-            data-type="symbol"
-          >
-            <img
-              src="./images/plus.svg"
-              alt="plus-icon"
-              data-type="symbol"
+            <button
+              class="container__grid--item"
+              data-value="1"
+              data-type="number"
+            >
+              1
+            </button>
+            <button
+              class="container__grid--item"
+              data-value="2"
+              data-type="number"
+            >
+              2
+            </button>
+            <button
+              class="container__grid--item"
+              data-value="3"
+              data-type="number"
+            >
+              3
+            </button>
+            <button
+              class="container__grid--item container__grid--item-1"
               data-value="&plus;"
-            />
-          </button>
-
-          <button
-            class="container__grid--item"
-            data-value="0"
-            data-type="number"
-          >
-            0
-          </button>
-          <button
-            class="container__grid--item"
-            data-value="."
-            data-type="number"
-          >
-            .
-          </button>
-          <button
-            class="container__grid--item container__grid--item-1"
-            data-value="="
-            data-type="symbol"
-          >
-            <img
-              src="./images/equal.svg"
-              alt="equal-icon"
               data-type="symbol"
+            >
+              <img
+                src="./images/plus.svg"
+                alt="plus-icon"
+                data-type="symbol"
+                data-value="&plus;"
+              />
+            </button>
+
+            <button
+              class="container__grid--item"
+              data-value="0"
+              data-type="number"
+            >
+              0
+            </button>
+            <button
+              class="container__grid--item"
+              data-value="."
+              data-type="number"
+            >
+              .
+            </button>
+            <button
+              class="container__grid--item container__grid--item-1"
               data-value="="
-            />
-          </button>
+              data-type="symbol"
+            >
+              <img
+                src="./images/equal.svg"
+                alt="equal-icon"
+                data-type="symbol"
+                data-value="="
+              />
+            </button>
+          </div>
         </div>
       </div>
     </main>

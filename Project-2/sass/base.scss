@@ -7,29 +7,29 @@
   --color-txt: #cbd5e1;
   --color-total: #f8fafc;
   --color-bg: #1e293bec;
-
   --color-shadow: #0f172a;
 }
 /* media-queries */
 $bp-large: 68.75em; //1100px
 $bp-medium: 56.25em; //900px
 $bp-mediumSmall: 50em; //800px
-$bp-small: 25em; //400px
+$bp-small: 43.75em; //700px
+$bp-xsmall: 31.25em; //500px
 $bp-smaller: 18.75em; //300px
 
 /* GLOBAL SETTINGS */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  // @media only screen and (max-width: $bp-large) {
-  //   font-size: 50%;
-  // }
-  // @media only screen and (max-width: $bp-medium) {
-  //   font-size: 43.75%;
-  // }
-  // @media only screen and (max-width: $bp-mediumSmall) {
-  //   font-size: 37.5%;
-  // }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 43.75%;
+  }
+  @media only screen and (max-width: $bp-mediumSmall) {
+    font-size: 37.5%;
+  }
 }
 
 body {
@@ -49,11 +49,16 @@ body {
   // CENTER CONTENT
   display: grid;
   place-content: center;
-  // @media only screen and (max-width: $bp-smaller) {
-  //   padding: 2rem;
-  // }
+  @media only screen and (max-width: $bp-smaller) {
+    align-content: start;
+    justify-content: center;
+  }
 }
-
+.main {
+  @media only screen and (max-width: $bp-smaller) {
+    margin: 2rem;
+  }
+}
 *,
 *::after,
 *::before {
