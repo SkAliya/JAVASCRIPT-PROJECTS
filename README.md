@@ -16,7 +16,7 @@ This repo contains all JavaScript projects🗃️ from Newbie🌱 to Advance �
 Live Site URL: [Live Demo](https://leafy-empanada-416b13.netlify.app/)
 
 </div>
-
+<hr>
 <div align="center">
  <h2 align="center">Project-2</h2>
 
