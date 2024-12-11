@@ -1,0 +1,14 @@
+{
+  "name": "project-3",
+  "version": "1.0.0",
+  "description": "Digital-clock | Project-3",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss style.css -w"
+  },
+  "author": "Aliya Shaik",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.82.0"
+  }
+}

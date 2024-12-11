@@ -1,0 +1,67 @@
+@use "./base.scss" as var1;
+
+.date {
+  width: 55vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
+    linear-gradient(rgba(253, 27, 27, 0.99), rgba(253, 27, 27, 0.99));
+  clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+  color: var(--primary-color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  &__inner {
+    margin-left: 50%;
+    margin-top: -40%;
+  }
+  &__day {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  &__month {
+    font-size: 4rem;
+  }
+}
+.clock {
+  margin-bottom: -20rem;
+
+  &__progress {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50rem;
+    background: conic-gradient(
+      var(--primary-color-1) 216deg,
+      rgba(0, 0, 0, 0.073) 0deg
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 22rem;
+      height: 22rem;
+      border-radius: 50rem;
+      background-color: var(--primary-color-2);
+    }
+  }
+  &__time {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--inner {
+      font-size: 5rem;
+      font-weight: 600;
+      color: var(--primary-color-1);
+    }
+    &--merid {
+      z-index: 10;
+      font-size: 2rem;
+      color: var(--primary-color-1);
+    }
+  }
+}

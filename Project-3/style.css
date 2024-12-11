@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --primary-color-1: #dc2626;
+  --color-txt: #cbd5e1;
+  --primary-color-2: #fff7ed;
+  --color-black: #030712;
+  --color-shadow: #0f172a;
+}
+
+/* media-queries */
+/* GLOBAL SETTINGS */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--primary-color-2);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.date {
+  width: 55vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), linear-gradient(rgba(253, 27, 27, 0.99), rgba(253, 27, 27, 0.99));
+  clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+  color: var(--primary-color-2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+}
+.date__inner {
+  margin-left: 50%;
+  margin-top: -40%;
+}
+.date__day {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.date__month {
+  font-size: 4rem;
+}
+
+.clock {
+  margin-bottom: -20rem;
+}
+.clock__progress {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50rem;
+  background: conic-gradient(var(--primary-color-1) 216deg, rgba(0, 0, 0, 0.073) 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock__progress::before {
+  content: "";
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  border-radius: 50rem;
+  background-color: var(--primary-color-2);
+}
+.clock__time {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.clock__time--inner {
+  font-size: 5rem;
+  font-weight: 600;
+  color: var(--primary-color-1);
+}
+.clock__time--merid {
+  z-index: 10;
+  font-size: 2rem;
+  color: var(--primary-color-1);
+}
+
+/*# sourceMappingURL=style.css.map */
