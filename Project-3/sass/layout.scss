@@ -5,58 +5,92 @@
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)),
     linear-gradient(rgba(253, 27, 27, 0.99), rgba(253, 27, 27, 0.99));
-  clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+  transform: skew(-45deg);
   color: var(--primary-color-2);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: right;
+  @media only screen and (max-width: var1.$bp-small) {
+    width: 100vw;
+    height: 30vh;
+    transform: skew(0);
+    justify-content: end;
+  }
   &__inner {
+    transform: skew(45deg);
     margin-left: 50%;
     margin-top: -40%;
+    @media only screen and (max-width: var1.$bp-small) {
+      transform: skew(0);
+      margin: 0;
+      text-align: center;
+    }
   }
   &__day {
     font-size: 3rem;
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1;
+    letter-spacing: 0.05rem;
   }
   &__month {
     font-size: 4rem;
+    letter-spacing: 0.1rem;
   }
 }
 .clock {
   margin-bottom: -20rem;
 
-  &__progress {
+  &__outer {
     width: 25rem;
     height: 25rem;
     border-radius: 50rem;
     background: conic-gradient(
       var(--primary-color-1) 216deg,
-      rgba(0, 0, 0, 0.073) 0deg
+      var(--primary-color-2) 0deg
     );
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  &__inner {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50rem;
+    background: conic-gradient(rgba(0, 0, 0, 0.708) 150deg, #fff7ed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__time {
+    width: 19rem;
+    height: 19rem;
+    border-radius: 50rem;
+    background: conic-gradient(var(--primary-color-1) 320deg, #fff7ed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &::before {
-      content: "";
       position: absolute;
-      width: 22rem;
-      height: 22rem;
+      content: "";
+      width: 16rem;
+      height: 16rem;
       border-radius: 50rem;
       background-color: var(--primary-color-2);
     }
-  }
-  &__time {
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    &--outer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &--inner {
+      z-index: 10;
       font-size: 5rem;
       font-weight: 600;
       color: var(--primary-color-1);
+      display: flex;
     }
     &--merid {
       z-index: 10;

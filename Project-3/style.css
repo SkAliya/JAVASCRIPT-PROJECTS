@@ -15,6 +15,26 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  html {
+    font-size: 31.25%;
+  }
+}
 
 body {
   min-height: 100vh;
@@ -23,6 +43,13 @@ body {
   line-height: 1.6;
   display: flex;
   align-items: center;
+}
+@media only screen and (max-width: 43.75em) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
 }
 
 *,
@@ -37,7 +64,7 @@ body {
   width: 55vw;
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), linear-gradient(rgba(253, 27, 27, 0.99), rgba(253, 27, 27, 0.99));
-  clip-path: polygon(0 0, 100% 0%, 85% 100%, 0% 100%);
+  transform: skew(-45deg);
   color: var(--primary-color-2);
   display: flex;
   flex-direction: column;
@@ -45,49 +72,86 @@ body {
   align-items: center;
   text-align: right;
 }
+@media only screen and (max-width: 43.75em) {
+  .date {
+    width: 100vw;
+    height: 30vh;
+    transform: skew(0);
+    justify-content: end;
+  }
+}
 .date__inner {
+  transform: skew(45deg);
   margin-left: 50%;
   margin-top: -40%;
+}
+@media only screen and (max-width: 43.75em) {
+  .date__inner {
+    transform: skew(0);
+    margin: 0;
+    text-align: center;
+  }
 }
 .date__day {
   font-size: 3rem;
   font-weight: 400;
   line-height: 1.2;
+  letter-spacing: 0.05rem;
 }
 .date__month {
   font-size: 4rem;
+  letter-spacing: 0.1rem;
 }
 
 .clock {
   margin-bottom: -20rem;
 }
-.clock__progress {
+.clock__outer {
   width: 25rem;
   height: 25rem;
   border-radius: 50rem;
-  background: conic-gradient(var(--primary-color-1) 216deg, rgba(0, 0, 0, 0.073) 0deg);
+  background: conic-gradient(var(--primary-color-1) 216deg, var(--primary-color-2) 0deg);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.clock__progress::before {
-  content: "";
-  position: absolute;
+.clock__inner {
   width: 22rem;
   height: 22rem;
   border-radius: 50rem;
-  background-color: var(--primary-color-2);
+  background: conic-gradient(rgba(0, 0, 0, 0.708) 150deg, #fff7ed 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .clock__time {
-  z-index: 10;
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50rem;
+  background: conic-gradient(var(--primary-color-1) 320deg, #fff7ed 0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clock__time::before {
+  position: absolute;
+  content: "";
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50rem;
+  background-color: var(--primary-color-2);
+}
+.clock__time--outer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .clock__time--inner {
+  z-index: 10;
   font-size: 5rem;
   font-weight: 600;
   color: var(--primary-color-1);
+  display: flex;
 }
 .clock__time--merid {
   z-index: 10;
