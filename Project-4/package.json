@@ -1,0 +1,14 @@
+{
+  "name": "project-4",
+  "version": "1.0.0",
+  "description": "Tip - Calculator | Project-4",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss style.css -w"
+  },
+  "author": "Aliya Shaik",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.0"
+  }
+}

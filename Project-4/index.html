@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIP - Calculator | Project-4</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <!-- LEFT PART FOR INPUTS FROM USER -->
+        <div class="bill">
+          <div class="bill__top">
+            <label class="headings">Bill</label><br />
+            <input class="bill__top--amount" type="text" placeholder="$" />
+          </div>
+
+          <div class="bill__middle">
+            <label class="headings">Select Tip %</label>
+            <div class="bill__middle--tips">
+              <button class="bill__middle--tips-tip">5%</button>
+              <button class="bill__middle--tips-tip">10%</button>
+              <button class="bill__middle--tips-tip">15%</button>
+              <button class="bill__middle--tips-tip">25%</button>
+              <button class="bill__middle--tips-tip">50%</button>
+              <button class="bill__middle--tips-tip">Custom</button>
+            </div>
+          </div>
+
+          <div class="bill__bottom">
+            <label class="headings">Number of People</label><br />
+            <input
+              type="text"
+              class="bill__bottom--count"
+              placeholder="@"
+            /><br />
+            <button class="bill__bottom--calc">Calculate Tip</button>
+          </div>
+        </div>
+
+        <!-- RIGHT PART FOR TOTAL BILL AMOUNT TO PAY -->
+        <div class="amount">
+          <!-- TIP AMOUNT / PERSON -->
+          <div class="tip-amount">
+            <div class="tip-amount__part1">
+              <p class="tip-amount__part1--head">Tip Amount</p>
+              <p class="tip-amount__part1--text">/ Person</p>
+            </div>
+            <div class="tip-amount__part2">$7.50</div>
+          </div>
+          <!-- TOTAL AMOUNT / PERSON -->
+          <div class="tip-amount">
+            <div class="tip-amount__part1">
+              <p class="tip-amount__part1--head">Total</p>
+              <p class="tip-amount__part1--text">/ Person</p>
+            </div>
+            <div class="tip-amount__part2">$57.50</div>
+          </div>
+          <!-- TOTAL BILL AMOUNT -->
+          <div class="tip-amount">
+            <p class="tip-amount__part1--head">Total Bill</p>
+            <div class="tip-amount__part2">$500.50</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+<script src="script.js"></script>
