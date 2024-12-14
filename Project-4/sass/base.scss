@@ -5,9 +5,11 @@
   /* COLORS */
   --primary-color-1: #9d174d;
   --color-txt: #fdf2f8;
+  --color-heading: #52525b;
   --secondary-color-2: #f472b6;
   --color-bg-1: #fce7f3;
   --color-bg-2: #ec4899;
+  --color-white: #fff;
 }
 /* media-queries */
 $bp-large: 68.75em; //1100px
@@ -37,7 +39,7 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: var(--primary-color-2);
+  background-color: var(--color-bg-1);
   font-family: "Roboto Mono", monospace;
   line-height: 1.6;
   display: grid;

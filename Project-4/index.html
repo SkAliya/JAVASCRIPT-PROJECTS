@@ -12,12 +12,18 @@
         <!-- LEFT PART FOR INPUTS FROM USER -->
         <div class="bill">
           <div class="bill__top">
-            <label class="headings">Bill</label><br />
-            <input class="bill__top--amount" type="text" placeholder="$" />
+            <p class="headings">Bill</p>
+
+            <input
+              class="bill__top--amount bill__inputs"
+              type="text"
+              placeholder="$"
+              value="500"
+            />
           </div>
 
           <div class="bill__middle">
-            <label class="headings">Select Tip %</label>
+            <p class="headings">Select Tip %</p>
             <div class="bill__middle--tips">
               <button class="bill__middle--tips-tip">5%</button>
               <button class="bill__middle--tips-tip">10%</button>
@@ -29,38 +35,42 @@
           </div>
 
           <div class="bill__bottom">
-            <label class="headings">Number of People</label><br />
+            <p class="headings">Number of People</p>
+
             <input
               type="text"
-              class="bill__bottom--count"
+              class="bill__bottom--count bill__inputs"
               placeholder="@"
+              value="2"
             /><br />
-            <button class="bill__bottom--calc">Calculate Tip</button>
+            <button class="bill__bottom--calc bill__middle--tips-tip">
+              Calculate Tip
+            </button>
           </div>
         </div>
 
         <!-- RIGHT PART FOR TOTAL BILL AMOUNT TO PAY -->
         <div class="amount">
           <!-- TIP AMOUNT / PERSON -->
-          <div class="tip-amount">
-            <div class="tip-amount__part1">
-              <p class="tip-amount__part1--head">Tip Amount</p>
-              <p class="tip-amount__part1--text">/ Person</p>
+          <div class="amount__tip-amount">
+            <div class="amount__tip-amount__part1">
+              <p class="amount__tip-amount__part1--head">Tip Amount</p>
+              <p class="amount__tip-amount__part1--text">/ Person</p>
             </div>
-            <div class="tip-amount__part2">$7.50</div>
+            <div class="amount__tip-amount__part2">$7.50</div>
           </div>
           <!-- TOTAL AMOUNT / PERSON -->
-          <div class="tip-amount">
-            <div class="tip-amount__part1">
-              <p class="tip-amount__part1--head">Total</p>
-              <p class="tip-amount__part1--text">/ Person</p>
+          <div class="amount__tip-amount">
+            <div class="amount__tip-amount__part1">
+              <p class="amount__tip-amount__part1--head">Total</p>
+              <p class="amount__tip-amount__part1--text">/ Person</p>
             </div>
-            <div class="tip-amount__part2">$57.50</div>
+            <div class="amount__tip-amount__part2">$57.50</div>
           </div>
           <!-- TOTAL BILL AMOUNT -->
-          <div class="tip-amount">
-            <p class="tip-amount__part1--head">Total Bill</p>
-            <div class="tip-amount__part2">$500.50</div>
+          <div class="amount__tip-amount">
+            <p class="amount__tip-amount__part1--head">Total Bill</p>
+            <div class="amount__tip-amount__part2">$500.50</div>
           </div>
         </div>
       </div>

@@ -1,1 +1,133 @@
 @use "./base.scss" as var1;
+// --primary-color-1: #9d174d;
+// --color-txt: #fdf2f8;
+// --secondary-color-2:#f9a8d4;
+// --color-bg-1: #fce7f3;
+// --color-bg-2: #ec4899;
+// --color-white: #fff;
+// --color-heading:#27272a;
+
+.container {
+  max-width: 70rem;
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  display: flex;
+  padding: 2rem;
+  column-gap: 2rem;
+}
+.headings {
+  font-size: 1.5rem;
+  color: var(--color-heading);
+  margin-bottom: 0.5rem;
+}
+
+// LEFT PART
+.bill {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  &__inputs {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--color-bg-1);
+    color: var(--primary-color-1);
+    border-radius: 0.3rem;
+    text-align: right;
+    &:focus {
+      outline-color: var(--primary-color-1);
+    }
+  }
+  &__top {
+    &--amount {
+    }
+  }
+  &__middle {
+    &--tips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      &-tip {
+        border: none;
+        padding: 0.7rem 2.5rem;
+        border-radius: 0.3rem;
+        font-size: 1.5rem;
+        background-color: var(--primary-color-1);
+        color: var(--color-txt);
+        font-weight: 500;
+        flex: 1;
+        transition: all 0.3s;
+        &:hover {
+          cursor: pointer;
+          background-color: var(--color-bg-1);
+          color: var(--primary-color-1);
+        }
+        &:last-child {
+          font-size: 1.2rem;
+          background-color: var(--color-bg-1);
+          color: var(--color-heading);
+          &:hover {
+            background-color: var(--primary-color-1);
+            color: var(--color-txt);
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    &--count {
+    }
+    &--calc.bill__middle--tips-tip {
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem 0;
+      width: 100%;
+      background-color: var(--primary-color-1);
+      color: var(--color-txt);
+      transition: all 0.3s;
+      &:hover {
+        cursor: pointer;
+        background-color: var(--color-bg-1);
+        color: var(--primary-color-1);
+      }
+    }
+  }
+}
+
+// RIGHT PART
+.amount {
+  flex: 1;
+  padding: 4rem;
+  background-color: var(--primary-color-1);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__tip-amount {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__part1 {
+      &--head {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: var(--color-white);
+      }
+      &--text {
+        font-size: 1.5rem;
+        color: var(--secondary-color-2);
+      }
+    }
+    &__part2 {
+      font-size: 2.4rem;
+      color: var(--secondary-color-2);
+      font-weight: 600;
+    }
+    &:last-child {
+      margin-top: auto;
+    }
+  }
+}
