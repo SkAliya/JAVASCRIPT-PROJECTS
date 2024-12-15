@@ -6,11 +6,13 @@
 // --color-bg-2: #ec4899;
 // --color-white: #fff;
 // --color-heading:#27272a;
-
+ion-icon {
+  font-size: 20px;
+}
 .container {
   max-width: 70rem;
   background-color: var(--color-white);
-  border-radius: 1rem;
+  border-radius: 2rem;
   display: flex;
   padding: 2rem;
   column-gap: 2rem;
@@ -19,6 +21,9 @@
   font-size: 1.5rem;
   color: var(--color-heading);
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 // LEFT PART
@@ -41,15 +46,14 @@
       outline-color: var(--primary-color-1);
     }
   }
-  &__top {
-    &--amount {
-    }
-  }
+
   &__middle {
     &--tips {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: start;
+      align-items: start;
       &-tip {
         border: none;
         padding: 0.7rem 2.5rem;
@@ -67,8 +71,11 @@
         }
         &:last-child {
           font-size: 1.2rem;
+          padding: 0.89rem 2.7rem;
           background-color: var(--color-bg-1);
           color: var(--color-heading);
+          flex-grow: 0;
+
           &:hover {
             background-color: var(--primary-color-1);
             color: var(--color-txt);
@@ -77,10 +84,12 @@
       }
     }
   }
+  .btnSelected {
+    background-color: var(--color-bg-1);
+    color: var(--primary-color-1);
+  }
 
   &__bottom {
-    &--count {
-    }
     &--calc.bill__middle--tips-tip {
       font-size: 1.5rem;
       margin: 2rem 0 1rem 0;
@@ -88,6 +97,15 @@
       background-color: var(--primary-color-1);
       color: var(--color-txt);
       transition: all 0.3s;
+      &.reset {
+        background-color: var(--color-bg-1);
+        color: var(--color-heading);
+        &:hover {
+          cursor: pointer;
+          background-color: var(--primary-color-1);
+          color: var(--color-txt);
+        }
+      }
       &:hover {
         cursor: pointer;
         background-color: var(--color-bg-1);

@@ -42,10 +42,14 @@ select {
   font: inherit;
 }
 
+ion-icon {
+  font-size: 20px;
+}
+
 .container {
   max-width: 70rem;
   background-color: var(--color-white);
-  border-radius: 1rem;
+  border-radius: 2rem;
   display: flex;
   padding: 2rem;
   column-gap: 2rem;
@@ -55,6 +59,9 @@ select {
   font-size: 1.5rem;
   color: var(--color-heading);
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .bill {
@@ -81,6 +88,8 @@ select {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: start;
+  align-items: start;
 }
 .bill__middle--tips-tip {
   border: none;
@@ -100,12 +109,18 @@ select {
 }
 .bill__middle--tips-tip:last-child {
   font-size: 1.2rem;
+  padding: 0.89rem 2.7rem;
   background-color: var(--color-bg-1);
   color: var(--color-heading);
+  flex-grow: 0;
 }
 .bill__middle--tips-tip:last-child:hover {
   background-color: var(--primary-color-1);
   color: var(--color-txt);
+}
+.bill .btnSelected {
+  background-color: var(--color-bg-1);
+  color: var(--primary-color-1);
 }
 .bill__bottom--calc.bill__middle--tips-tip {
   font-size: 1.5rem;
@@ -114,6 +129,15 @@ select {
   background-color: var(--primary-color-1);
   color: var(--color-txt);
   transition: all 0.3s;
+}
+.bill__bottom--calc.bill__middle--tips-tip.reset {
+  background-color: var(--color-bg-1);
+  color: var(--color-heading);
+}
+.bill__bottom--calc.bill__middle--tips-tip.reset:hover {
+  cursor: pointer;
+  background-color: var(--primary-color-1);
+  color: var(--color-txt);
 }
 .bill__bottom--calc.bill__middle--tips-tip:hover {
   cursor: pointer;
