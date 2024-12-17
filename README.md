@@ -1,6 +1,7 @@
-# JAVASCRIPT-PROJECTS
+<h1 align='center'>$\color{lime}{\textrm{JAVASCRIPT - PROJECTS}}$</h1>
 
-This repo contains all JavaScript projects🗃️ from Newbie🌱 to Advance 🚀 .
+ <!--<h3 align="center" style="color:'green'">This repo contains all JavaScript projects🗃️ from Newbie🌱 to Advance 🚀.</h1>-->
+<h2 align="center" >$\color{lime}{\textrm{This repo 🗃️ contains all JavaScript projects  from Newbie 🌱 to Advance 🚀}}$</h2>
 
 <div align="center">
  <h2 align="center">Project-1</h2>
