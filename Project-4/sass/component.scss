@@ -1,13 +1,16 @@
 @use "./base.scss" as var1;
-// --primary-color-1: #9d174d;
-// --color-txt: #fdf2f8;
-// --secondary-color-2:#f9a8d4;
-// --color-bg-1: #fce7f3;
-// --color-bg-2: #ec4899;
-// --color-white: #fff;
-// --color-heading:#27272a;
+
 ion-icon {
   font-size: 20px;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color-1);
+  margin-bottom: 2rem;
+  @media only screen and (max-width: var1.$bp-xsmall) {
+    margin-bottom: 1rem;
+  }
 }
 .container {
   max-width: 70rem;
@@ -16,6 +19,14 @@ ion-icon {
   display: flex;
   padding: 2rem;
   column-gap: 2rem;
+  margin: 2rem;
+
+  @media only screen and (max-width: var1.$bp-xsmall) {
+    flex-direction: column;
+    row-gap: 4rem;
+    margin: 0 3rem;
+    border-radius: 1.5rem;
+  }
 }
 .headings {
   font-size: 1.5rem;
@@ -64,6 +75,9 @@ ion-icon {
         font-weight: 500;
         flex: 1;
         transition: all 0.3s;
+        @media only screen and (max-width: var1.$bp-xsmall) {
+          flex: 0;
+        }
         &:hover {
           cursor: pointer;
           background-color: var(--color-bg-1);
@@ -124,6 +138,9 @@ ion-icon {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  @media only screen and (max-width: var1.$bp-xsmall) {
+    padding: 2rem;
+  }
   &__tip-amount {
     display: flex;
     justify-content: space-between;

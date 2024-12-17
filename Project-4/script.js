@@ -10,8 +10,10 @@ const totalAmount = document.querySelector(".tot");
 let billNo = 0;
 let pepNo = 0;
 let percent = 0;
+
 function doMath(e) {
   e.preventDefault();
+  // resetting after tip calculated
   if (e.target.textContent === "Reset") {
     e.target.textContent = "Calculate Tip";
     e.target.classList.remove("reset");
@@ -27,32 +29,46 @@ function doMath(e) {
     bill.value = 0;
     count.value = 0;
   } else {
-    billNo = bill.value;
-    pepNo = count.value;
-    let tipPer = (billNo / pepNo) * (percent / 100);
-    let totPer = (billNo / pepNo + tipPer).toFixed(2);
+    // calculating tips & totals
+    billNo = +bill.value;
+    pepNo = +count.value;
+    // convert tip % to decimal
+    let tipPer = percent / 100;
 
-    console.log(tipPer, totPer);
-    tipPerPerson.textContent = `$${tipPer}`;
-    totalPerPerson.textContent = `$${totPer}`;
-    totalAmount.textContent = `$${+billNo + tipPer * pepNo}`;
+    // tip on total bill
+    let tip = billNo * tipPer;
+    // splitting tip for each
+    let tipPerson = Number((tip / pepNo).toFixed(1));
+    // divide the bill
+    let billPerPerson = Number((billNo / pepNo).toFixed(1));
+    // Updating UI
+    tipPerPerson.textContent = `$${tipPerson}`;
+    totalPerPerson.textContent = `$${billPerPerson + tipPerson}`;
+    totalAmount.textContent = `$${billNo + tip}`;
+    //resetting calculating tip btn
     e.target.classList.add("reset");
     e.target.textContent = "Reset";
   }
 }
+// getting tip % from user or seleted 1s from defult
 function getPercent(e) {
   if (e.target.classList.contains("custom")) {
-    let newPer = prompt("Enter Your Percentage %");
-    if (!newPer) return;
+    let newPer = prompt(
+      "Enter Your Percentage % ,If u not enter any %, 1% is defualt"
+    );
+
+    if (!newPer) newPer = 1;
+
     document
       .querySelectorAll(".bill__middle--tips-tip")
       .forEach((btn) => btn.classList.remove("btnSelected"));
-    let html = `<button class="bill__middle--tips-tip btnSelected">${newPer}%</button>`;
+
+    let html = `<button class="bill__middle--tips-tip btnSelected" data-percent=${newPer}>${newPer}%</button>`;
     e.target.insertAdjacentHTML("beforeBegin", html);
-    console.log(+newPer);
     percent = +newPer;
   } else {
-    percent = e.target.textContent.split("")[0];
+    // percent = +e.target.textContent.split("").slice(0, -1).join("");
+    percent = +e.target.dataset.percent;
     btns.forEach((btn) => btn.classList.remove("btnSelected"));
     e.target.classList.add("btnSelected");
   }

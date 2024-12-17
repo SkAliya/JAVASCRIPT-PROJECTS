@@ -8,6 +8,7 @@
   </head>
   <body>
     <main>
+      <h1>Tip Calculator %</h1>
       <div class="container">
         <!-- LEFT PART FOR INPUTS FROM USER -->
         <form action="#" class="bill">
@@ -18,7 +19,6 @@
               class="bill__top--amount bill__inputs"
               type="text"
               placeholder="$"
-              value=""
               required
             />
           </div>
@@ -26,11 +26,21 @@
           <div class="bill__middle">
             <p class="headings">Select Tip %</p>
             <div class="bill__middle--tips">
-              <button class="bill__middle--tips-tip">5%</button>
-              <button class="bill__middle--tips-tip">10%</button>
-              <button class="bill__middle--tips-tip">15%</button>
-              <button class="bill__middle--tips-tip">25%</button>
-              <button class="bill__middle--tips-tip">50%</button>
+              <button class="bill__middle--tips-tip" data-percent="5">
+                5%
+              </button>
+              <button class="bill__middle--tips-tip" data-percent="10">
+                10%
+              </button>
+              <button class="bill__middle--tips-tip" data-percent="15">
+                15%
+              </button>
+              <button class="bill__middle--tips-tip" data-percent="25">
+                25%
+              </button>
+              <button class="bill__middle--tips-tip" data-percent="50">
+                50%
+              </button>
               <button class="bill__middle--tips-tip custom">Custom</button>
             </div>
           </div>
@@ -45,7 +55,6 @@
               type="text"
               class="bill__bottom--count bill__inputs"
               placeholder="0"
-              value=""
               required
             /><br />
             <button

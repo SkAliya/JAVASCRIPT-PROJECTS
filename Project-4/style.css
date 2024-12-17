@@ -17,6 +17,11 @@ html {
   font-size: 62.5%;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   min-height: 100vh;
@@ -25,6 +30,12 @@ body {
   line-height: 1.6;
   display: grid;
   place-content: center;
+}
+@media only screen and (max-width: 31.25em) {
+  body {
+    margin-top: 2rem;
+    place-content: start center;
+  }
 }
 
 *,
@@ -46,6 +57,18 @@ ion-icon {
   font-size: 20px;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color-1);
+  margin-bottom: 2rem;
+}
+@media only screen and (max-width: 31.25em) {
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
 .container {
   max-width: 70rem;
   background-color: var(--color-white);
@@ -53,6 +76,15 @@ ion-icon {
   display: flex;
   padding: 2rem;
   column-gap: 2rem;
+  margin: 2rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .container {
+    flex-direction: column;
+    row-gap: 4rem;
+    margin: 0 3rem;
+    border-radius: 1.5rem;
+  }
 }
 
 .headings {
@@ -101,6 +133,11 @@ ion-icon {
   font-weight: 500;
   flex: 1;
   transition: all 0.3s;
+}
+@media only screen and (max-width: 31.25em) {
+  .bill__middle--tips-tip {
+    flex: 0;
+  }
 }
 .bill__middle--tips-tip:hover {
   cursor: pointer;
@@ -153,6 +190,11 @@ ion-icon {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+@media only screen and (max-width: 31.25em) {
+  .amount {
+    padding: 2rem;
+  }
 }
 .amount__tip-amount {
   display: flex;

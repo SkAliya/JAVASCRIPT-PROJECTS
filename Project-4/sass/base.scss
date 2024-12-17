@@ -23,16 +23,16 @@ $bp-smaller: 18.75em; //300px
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  // @media only screen and (max-width: $bp-large) {
-  //   font-size: 50%;
-  // }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
   // @media only screen and (max-width: $bp-medium) {
   //   font-size: 43.75%;
   // }
   // @media only screen and (max-width: $bp-mediumSmall) {
   //   font-size: 37.5%;
   // }
-  // @media only screen and (max-width: $bp-small) {
+  // @media only screen and (max-width: $bp-xsmall) {
   //   font-size: 31.25%;
   // }
 }
@@ -44,11 +44,10 @@ body {
   line-height: 1.6;
   display: grid;
   place-content: center;
-  // @media only screen and (max-width: $bp-small) {
-  //   flex-direction: column;
-  //   align-items: center;
-  //   gap: 4rem;
-  // }
+  @media only screen and (max-width: $bp-xsmall) {
+    margin-top: 2rem;
+    place-content: start center;
+  }
 }
 
 *,
