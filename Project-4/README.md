@@ -17,7 +17,7 @@
 
 <div align="center">
 
-![solution preview](Project-4/images/desktop-preview.png)
+![solution preview](images/desktop-preview.png)
 
 </div>
 
